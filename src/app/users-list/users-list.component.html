@@ -1,0 +1,17 @@
+
+
+<div class="row">
+  <div *ngFor="let item of data.data" class="column">
+    <div class="card">
+      <img [src]="item.avatar">
+      <h3><a [routerLink]='["detail", item.id]'>{{item.first_name}} {{item.last_name}}</a></h3>
+      <p>{{item.email}}</p>
+    </div>
+  </div>
+</div>
+
+<div class="pagination">
+  <a href="#" (click)="changePage(1)">&laquo;</a>
+  <a href="#" [ngClass]="{'active': (i + 1) == data.page}" *ngFor="let i of pageCount" (click)="changePage(i + 1)">{{i + 1}}</a>
+  <a href="#" (click)="changePage(data.total_pages)">&raquo;</a>
+</div>
