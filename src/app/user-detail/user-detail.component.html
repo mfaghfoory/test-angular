@@ -2,7 +2,7 @@
 <a [routerLink]='[""]'>back to list</a>
 </div>
 
-<div class="row">
+<div *ngIf="data" class="row">
   <div class="column">
     <div class="card">
       <img [src]="data.avatar">

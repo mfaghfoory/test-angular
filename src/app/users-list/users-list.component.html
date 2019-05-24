@@ -1,6 +1,6 @@
 
 
-<div class="row">
+<div *ngIf="data" class="row">
   <div *ngFor="let item of data.data" class="column">
     <div class="card">
       <img [src]="item.avatar">
